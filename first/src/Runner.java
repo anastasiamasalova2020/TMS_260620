@@ -1,17 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
-        int a = 9874;
-        int result = 0;
-        int b;
-        int n = 10000;
-        while (a > 0) {
-            b = a % 10;
-            result += b * (n / 10);
-            a /= 10;
-            n /= 10;
-        }
-        System.out.println(result);
+        byte octet = 127;
+        String bin = String.format("%8s", Integer.toBinaryString(octet)).replace(' ', '0');
+        System.out.println(bin);
     }
 }
